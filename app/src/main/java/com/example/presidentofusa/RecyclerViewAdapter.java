@@ -46,9 +46,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             @Override
             public void onClick(View v) {
 
-
                 Intent intent = new Intent(mContent, President_activity.class);
-
                 intent.putExtra("Name", mData.get(position).getName());
                 intent.putExtra("Description", mData.get(position).getDescription());
                 intent.putExtra("Thumbnail", mData.get(position).getThumbnail());
@@ -59,11 +57,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
             }
         });
-
-
-
-
-
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.example.presidentofusa;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -18,6 +19,8 @@ public class President_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_president_activity);
+        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+
 
         tvname=(TextView) findViewById(R.id.txtname);
         tvdescription=(TextView) findViewById(R.id.txtdesc);
@@ -31,6 +34,10 @@ public class President_activity extends AppCompatActivity {
         tvname.setText(Name);
         tvdescription.setText(Description);
         img.setImageResource(image);
+        ActionBar name = getSupportActionBar();
+        name.setTitle(tvname.getText ().toString());
 
     }
+
+
 }
